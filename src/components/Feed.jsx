@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Box, Button, Card, CardActions, CardContent, CardMedia, Divider, Typography } from '@mui/material';
 import React from 'react';
 
 
@@ -24,7 +24,7 @@ const Feed = () => {
       title: 'Card 1',
       subtitle: 'Subtitle for Card 1',
       content: 'Information about Card 1 goes here...',
-      image: 'https://images.unsplash.com/photo-1587691592099-24045742c181?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80', // Replace with the actual image URL
+      image: '../assets/picc.png', // Replace with the actual image URL
     },
     {
       title: 'Card 2',
@@ -38,9 +38,28 @@ const Feed = () => {
       content: 'Information about Card 3 goes here...',
       image: 'https://via.placeholder.com/400', // Replace with the actual image URL
     },
+    {
+      title: 'Card 4',
+      subtitle: 'Subtitle for Card 4',
+      content: 'Information about Card 4 goes here...',
+      image: '../assets/picc.png', // Replace with the actual image URL
+    },
+    {
+      title: 'Card 5',
+      subtitle: 'Subtitle for Card 5',
+      content: 'Information about Card 5 goes here...',
+      image: 'https://via.placeholder.com/400', // Replace with the actual image URL
+    },
+    {
+      title: 'Card 6',
+      subtitle: 'Subtitle for Card 6',
+      content: 'Information about Card 6 goes here...',
+      image: 'https://via.placeholder.com/400', // Replace with the actual image URL
+    },
   ];
   return (
-    <Box flex={8} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+    <Box flex={8} display="flex" p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+
         {cardData.map((card, index) => (
         <Card key={index} className={classes.card}>
           <CardMedia
@@ -59,6 +78,11 @@ const Feed = () => {
               {card.content}
             </Typography>
           </CardContent>
+          <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+          <Divider/>
         </Card>
       ))}
         </Box>

@@ -9,7 +9,13 @@ import SettingsIcon from '@mui/icons-material/Settings';
 
 const Sidebar = () => {
   return (
-    <Box position="static" height="100vh" flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+    <Box
+      height="100vh"
+      display="flex"
+      flex={1}
+      p={2}
+      sx={{ display: { xs: "none", sm: "block" },  position: 'sticky', top: 100  }}
+    >
           <nav aria-label="main mailbox folders">
         <List>
         <ListItem disablePadding>
