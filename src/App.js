@@ -3,6 +3,7 @@ import React from "react";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Feed from "./components/Feed";
+import LatencyContainer from "./components/LatencyContainer";
 
 const App = () => {
   return (
@@ -11,7 +12,9 @@ const App = () => {
       <Stack direction="row" style={{display: "flex",minHeight: "calc(100vh - 64px)"}} spacing={2} justifyContent="space-between">
         <Sidebar style={{ position: "sticky", top: 0 }} />
         <Feed/>
+        <LatencyContainer/>
       </Stack>
+      
     </Box>
   );
 };
